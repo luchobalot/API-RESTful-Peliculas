@@ -1,0 +1,14 @@
+# .gitignore
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build folders
+bin/
+obj/
+
+# Archivos de entorno
+.env
+*.log
