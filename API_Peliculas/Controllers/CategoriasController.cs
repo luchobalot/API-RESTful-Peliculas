@@ -35,10 +35,11 @@ namespace API_Peliculas.Controllers
         // |         VER TODAS LAS CATEOGRIAS       |
         // ==========================================
 
-        [HttpGet] 
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status403Forbidden)] // 403: Prohibido (el usuario no tiene permiso)
         [ProducesResponseType(StatusCodes.Status200OK)] // 200: OK (todo salió bien)
-        public IActionResult GetCategorias() {
+        public IActionResult GetCategorias()
+        {
             var ListaCategorias = _ctRepo.GetCategorias();
             var ListaCategoriasDto = new List<CategoriaDto>();
 
@@ -66,7 +67,8 @@ namespace API_Peliculas.Controllers
         public IActionResult GetCategoria(int categoriaId)
         {
             var itemCategoria = _ctRepo.GetCategoria(categoriaId); // Llama al método GetCategoria del repo para buscar la categoría en la bdd
-            if (itemCategoria == null) {
+            if (itemCategoria == null)
+            {
                 return NotFound(); // Si no existe (es null), devuelve una respuesta 404 Not Found
             }
 
@@ -83,7 +85,7 @@ namespace API_Peliculas.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)] // 201: Creado (éxito al crear un recurso)
         [ProducesResponseType(StatusCodes.Status500InternalServerError)] // 500: Error interno del servidor
-        [ProducesResponseType(StatusCodes.Status400BadRequest)] 
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)] // 401: No autorizado
         public IActionResult CrearCategoria([FromBody] CrearCategoriaDto crearCategoriaDto) // [FromBody] indica que los datos vendrán en el cuerpo de la petición HTTP
         {
@@ -95,7 +97,8 @@ namespace API_Peliculas.Controllers
             }
 
             // Verifica si el objeto recibido es nulo
-            if (crearCategoriaDto == null) {
+            if (crearCategoriaDto == null)
+            {
                 return BadRequest(ModelState);
             }
 
@@ -112,16 +115,77 @@ namespace API_Peliculas.Controllers
 
             //Intenta guardar la nueva categoría en la base de datos usando tu repositorio
             // Si falla, añade un mensaje de error y devuelve un error
-            if (!_ctRepo.CrearCategoria(categoria)) {
+            if (!_ctRepo.CrearCategoria(categoria))
+            {
                 ModelState.AddModelError("", $"Algo salio mal guardando el registro{categoria.Nombre}");
                 return StatusCode(404, ModelState);
             }
 
-            return CreatedAtRoute("GetCategoria", new {categoriaId = categoria.Id}, categoria);
-
-
-
-
+            return CreatedAtRoute("GetCategoria", new { categoriaId = categoria.Id }, categoria);
         }
+
+        // ==========================================
+        // |          ACTUALIZAR CATEGORIA          |
+        // ==========================================
+
+        [HttpPatch("{categoriaId:int}", Name = "ActualizarPatchCategoria")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public IActionResult ActualizarPatchCategoria(int categoriaId, [FromBody] CategoriaDto categoriaDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (categoriaDto == null || categoriaId != categoriaDto.Id)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var categoria = _mapper.Map<Categoria>(categoriaDto);
+
+            //Intenta guardar la nueva categoría en la base de datos usando tu repositorio
+            // Si falla, añade un mensaje de error y devuelve un error
+            if (!_ctRepo.ActualizarCategoria(categoria))
+            {
+                ModelState.AddModelError("", $"Algo salio mal actualizando el registro{categoria.Nombre}");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+
+        // ==========================================
+        // |          BORRAR UNA CATEGORIA          |
+        // ==========================================
+
+        [HttpDelete("{categoriaId:int}", Name = "BorrarCategoria")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public IActionResult BorrarCategoria(int categoriaId)
+        {
+            if (!_ctRepo.ExisteCategoria(categoriaId))
+            {
+                return NotFound($"No se encontro la categoría con el ID {categoriaId}");
+            }
+
+            var categoria = _ctRepo.GetCategoria(categoriaId);
+            
+            if (!_ctRepo.BorrarCategoria(categoria))
+            {
+                ModelState.AddModelError("", $"Algo salio mal borrando el registro{categoria.Nombre}");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+
+
+
     }
 }
