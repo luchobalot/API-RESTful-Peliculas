@@ -125,7 +125,7 @@ namespace API_Peliculas.Controllers
         }
 
         // ==========================================
-        // |          ACTUALIZAR CATEGORIA          |
+        // |      ACTUALIZAR CATEGORIA - PATCH      |
         // ==========================================
 
         [HttpPatch("{categoriaId:int}", Name = "ActualizarPatchCategoria")]

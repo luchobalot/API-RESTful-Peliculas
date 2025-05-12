@@ -253,10 +253,10 @@ C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticweb
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API_Peliculas.props
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API_Peliculas.props
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peli.89ED50A9.Up2Date
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peliculas.dll
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\refint\API_Peliculas.dll
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peliculas.pdb
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peliculas.genruntimeconfig.cache
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\ref\API_Peliculas.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
