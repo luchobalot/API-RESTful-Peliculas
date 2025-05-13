@@ -20,7 +20,7 @@ namespace API_Peliculas.Modelos
 
         public TipoClasificacion Clasificacion {  get; set; }
 
-        public DateTime FechaEstreno { get; set; }
+        public int AnioEstreno { get; set; }
 
         public DateTime FechaCreacion { get; set; }
 

@@ -145,6 +145,12 @@ namespace API_Peliculas.Controllers
                 return BadRequest(ModelState);
             }
 
+            var categoriaExistente = _ctRepo.GetCategoria(categoriaId);
+            if (categoriaExistente == null)
+            {
+                return NotFound($"No se encontro la categoria con el ID {categoriaId}");
+            }
+
             var categoria = _mapper.Map<Categoria>(categoriaDto);
 
             //Intenta guardar la nueva categoría en la base de datos usando tu repositorio
