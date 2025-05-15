@@ -19,6 +19,8 @@ namespace API_Peliculas.Repositorio
         public bool ActualizarPelicula(Pelicula pelicula)
         {
             pelicula.FechaCreacion = DateTime.Now;
+
+            // O mejor aún, opción 2: Desconectar cualquier entidad existente y luego actualizar
             _bd.Pelicula.Update(pelicula);
             return Guardar();
         }
