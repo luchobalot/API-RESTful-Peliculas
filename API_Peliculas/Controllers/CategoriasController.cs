@@ -190,8 +190,5 @@ namespace API_Peliculas.Controllers
 
             return NoContent();
         }
-
-
-
     }
 }

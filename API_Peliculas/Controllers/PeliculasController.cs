@@ -137,5 +137,92 @@ namespace API_Peliculas.Controllers
             return NoContent();
         }
 
+
+        // ==========================================
+        // |          BORRAR UNA PELICULA           |
+        // ==========================================
+
+        [HttpDelete("{peliculaId:int}", Name = "BorrarPelicula")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public IActionResult BorrarPelicula(int peliculaId)
+        {
+            if (!_pelRepo.ExistePelicula(peliculaId))
+            {
+                return NotFound($"No se encontro la pelicula con el ID {peliculaId}");
+            }
+
+            var pelicula = _pelRepo.GetPelicula(peliculaId);
+
+            if (!_pelRepo.BorrarPelicula(pelicula))
+            {
+                ModelState.AddModelError("", $"Algo salio mal borrando el registro{pelicula.Nombre}");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+
+
+        // ==========================================
+        // |         PELICULAS EN CATEGORIA         |
+        // ==========================================
+
+        [HttpGet("GetPeliculasEnCategoria/{categoriaId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+        public IActionResult GetPeliculasEnCategoria(int categoriaId)
+        {
+            var listaPeliculas = _pelRepo.GetPeliculasEnCategoria(categoriaId);
+
+            if (listaPeliculas == null)
+            {
+                return NotFound();
+            }
+
+            var itemPelicula = new List<PeliculaDto>();
+
+            foreach (var pelicula in listaPeliculas)
+            {
+                itemPelicula.Add(_mapper.Map<PeliculaDto>(pelicula));
+            }
+
+            return Ok(itemPelicula);
+        }
+
+        // ==========================================
+        // |         PELICULAS EN CATEGORIA         |
+        // ==========================================
+
+        [HttpGet("Buscar")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+        public IActionResult Busar(string nombre)
+        {
+            try
+            {
+                var resultado = _pelRepo.BuscarPelicula(nombre);
+
+                if (resultado.Any())
+                {
+                    return Ok(resultado);
+                }
+
+                return NotFound();
+
+            }
+            catch(Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error recuperando los datos del servidor!");
+            }
+        }
+
     }
 }
