@@ -1,6 +1,7 @@
 ﻿using API_Peliculas.Data;
 using API_Peliculas.Modelos;
 using API_Peliculas.Repositorio.IRepositorio;
+using Microsoft.EntityFrameworkCore;
 using System.Runtime.ConstrainedExecution;
 using System.Text.RegularExpressions;
 
@@ -16,14 +17,29 @@ namespace API_Peliculas.Repositorio
 
         public bool ActualizarCategoria(Categoria categoria)
         {
-            // Actualiza la fecha de creación al momento actual
-            // Marca la entidad para ser actualizada en la base de datos
-            // Guarda los cambios y retorna el resultado
-            categoria.FechaCreacion = DateTime.Now;
-            _bd.Categorias.Update(categoria);
-            return Guardar();
+            try
+            {
+                // Primero, desconectamos cualquier entidad existente con el mismo ID
+                var entidadExistente = _bd.Categorias.Local.FirstOrDefault(c => c.Id == categoria.Id);
+                if (entidadExistente != null)
+                {
+                    _bd.Entry(entidadExistente).State = EntityState.Detached;
+                }
+
+                // Ahora actualizamos la nueva entidad
+                categoria.FechaCreacion = DateTime.Now;
+                _bd.Entry(categoria).State = EntityState.Modified;
+
+                return Guardar();
+            }
+            catch (Exception ex)
+            {
+                // Aquí puedes registrar el error
+                Console.WriteLine($"Error al actualizar categoría: {ex.Message}");
+                return false;
+            }
         }
-          
+
         public bool BorrarCategoria(Categoria categoria)
         {
             // Marca la entidad para ser eliminada

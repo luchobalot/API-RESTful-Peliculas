@@ -121,9 +121,9 @@
   },
   {
     "ContainingType": "API_Peliculas.Controllers.CategoriasController",
-    "Method": "ActualizarPatchCategoria",
+    "Method": "ActualizarCategoria",
     "RelativePath": "api/Categorias/{categoriaId}",
-    "HttpMethod": "PATCH",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -168,7 +168,7 @@
         "StatusCode": 401
       }
     ],
-    "EndpointName": "ActualizarPatchCategoria"
+    "EndpointName": "ActualizarCategoria"
   },
   {
     "ContainingType": "API_Peliculas.Controllers.CategoriasController",

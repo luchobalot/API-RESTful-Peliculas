@@ -125,15 +125,15 @@ namespace API_Peliculas.Controllers
         }
 
         // ==========================================
-        // |      ACTUALIZAR CATEGORIA - PATCH      |
+        // |      ACTUALIZAR CATEGORIA - PUTT       |
         // ==========================================
 
-        [HttpPatch("{categoriaId:int}", Name = "ActualizarPatchCategoria")]
+        [HttpPut("{categoriaId:int}", Name = "ActualizarCategoria")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public IActionResult ActualizarPatchCategoria(int categoriaId, [FromBody] CategoriaDto categoriaDto)
+        public IActionResult ActualizarCategoria(int categoriaId, [FromBody] CategoriaDto categoriaDto)
         {
             if (!ModelState.IsValid)
             {
