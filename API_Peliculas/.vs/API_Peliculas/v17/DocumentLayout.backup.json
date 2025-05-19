@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\repositorio\\categoriarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:repositorio\\categoriarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\repositorio\\pelicularepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:repositorio\\pelicularepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\modelos\\dtos\\crearpeliculadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:modelos\\dtos\\crearpeliculadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\modelos\\dtos\\peliculadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:modelos\\dtos\\peliculadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\modelos\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:modelos\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\peliculasmappers\\peliculasmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:peliculasmappers\\peliculasmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Migrations\\20250519115951_TablaUsuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250519115951_TablaUsuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,112 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoriaRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\CategoriaRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\CategoriaRepositorio.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\CategoriaRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\CategoriaRepositorio.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBkAAABNAAAAAAAAAA==",
+              "Title": "20250519115951_TablaUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Migrations\\20250519115951_TablaUsuario.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250519115951_TablaUsuario.cs",
+              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Migrations\\20250519115951_TablaUsuario.cs",
+              "RelativeToolTip": "Migrations\\20250519115951_TablaUsuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T14:45:25.219Z",
+              "WhenOpened": "2025-05-19T11:59:51.532Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PeliculaRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\PeliculaRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\PeliculaRepositorio.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\PeliculaRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\PeliculaRepositorio.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAIwFAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:40:35.727Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PeliculasController.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Controllers\\PeliculasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PeliculasController.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Controllers\\PeliculasController.cs",
-              "RelativeToolTip": "Controllers\\PeliculasController.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAuwOMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:42:34.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoriasController.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Controllers\\CategoriasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriasController.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Controllers\\CategoriasController.cs",
-              "RelativeToolTip": "Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAcwL8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:34:56.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CrearPeliculaDto.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\CrearPeliculaDto.cs",
-              "RelativeDocumentMoniker": "Modelos\\Dtos\\CrearPeliculaDto.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\CrearPeliculaDto.cs",
-              "RelativeToolTip": "Modelos\\Dtos\\CrearPeliculaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:01:51.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PeliculasMapper.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\PeliculasMappers\\PeliculasMapper.cs",
-              "RelativeDocumentMoniker": "PeliculasMappers\\PeliculasMapper.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\PeliculasMappers\\PeliculasMapper.cs",
-              "RelativeToolTip": "PeliculasMappers\\PeliculasMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:53:56.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PeliculaDto.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\PeliculaDto.cs",
-              "RelativeDocumentMoniker": "Modelos\\Dtos\\PeliculaDto.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\PeliculaDto.cs",
-              "RelativeToolTip": "Modelos\\Dtos\\PeliculaDto.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:53:16.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T13:05:41.513Z"
+              "WhenOpened": "2025-05-19T11:58:14.535Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Pelicula.cs",
-              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Pelicula.cs",
-              "RelativeDocumentMoniker": "Modelos\\Pelicula.cs",
-              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Pelicula.cs",
-              "RelativeToolTip": "Modelos\\Pelicula.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Usuario.cs",
+              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Usuario.cs",
+              "RelativeToolTip": "Modelos\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:53:55.197Z"
+              "WhenOpened": "2025-05-19T11:53:15.499Z",
+              "EditorCaption": ""
             }
           ]
         }
