@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\repositorio\\irepositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:repositorio\\irepositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|c:\\users\\siag28\\desktop\\curso_api_udemy\\api_peliculas\\modelos\\dtos\\usuariologinrespuestadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F93A99E-95EE-47E1-A28E-40181B8BD6B5}|API_Peliculas.csproj|solutionrelative:modelos\\dtos\\usuariologinrespuestadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,11 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\UsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\UsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\UsuarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\UsuarioRepositorio.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T12:34:40.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IUsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T12:22:03.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UsuarioDatosDto.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\UsuarioDatosDto.cs",
               "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioDatosDto.cs",
@@ -50,12 +84,11 @@
               "RelativeToolTip": "Modelos\\Dtos\\UsuarioDatosDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T12:15:50.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T12:15:50.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UsuarioLoginRespuestaDto.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
               "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
@@ -68,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UsuarioLoginDto.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\UsuarioLoginDto.cs",
               "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioLoginDto.cs",
@@ -76,12 +109,11 @@
               "RelativeToolTip": "Modelos\\Dtos\\UsuarioLoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T12:09:46.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T12:09:46.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UsuarioRegistroDto.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\UsuarioRegistroDto.cs",
               "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioRegistroDto.cs",
@@ -89,12 +121,11 @@
               "RelativeToolTip": "Modelos\\Dtos\\UsuarioRegistroDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T12:05:14.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T12:05:14.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UsuarioDto.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Dtos\\UsuarioDto.cs",
               "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioDto.cs",
@@ -102,12 +133,11 @@
               "RelativeToolTip": "Modelos\\Dtos\\UsuarioDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T12:03:07.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T12:03:07.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -115,12 +145,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T11:58:14.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T11:58:14.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\Modelos\\Usuario.cs",
               "RelativeDocumentMoniker": "Modelos\\Usuario.cs",
@@ -128,8 +157,7 @@
               "RelativeToolTip": "Modelos\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T11:53:15.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T11:53:15.499Z"
             }
           ]
         }
