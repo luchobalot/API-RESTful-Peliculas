@@ -13,6 +13,6 @@ namespace API_Peliculas.Repositorio.IRepositorio
 
         Task<UsuarioLoginRespuestaDto> Login(UsuarioLoginDto usuarioLoginDto);
 
-        Task<UsuarioDatosDto> Registro(UsuarioRegistroDto usuarioRegistroDto);
+        Task<Usuario> Registro(UsuarioRegistroDto usuarioRegistroDto);
     }
 }

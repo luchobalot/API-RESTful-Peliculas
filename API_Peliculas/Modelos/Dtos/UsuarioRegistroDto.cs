@@ -14,5 +14,6 @@ namespace API_Peliculas.Modelos.Dtos
 
         [Required(ErrorMessage = "La contraseña es obligatoria.")]
         public string Password { get; set; }
+        public string Rol { get; set; }
     }
 }
