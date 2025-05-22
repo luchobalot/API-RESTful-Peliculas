@@ -260,3 +260,5 @@ C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\refint\AP
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peliculas.pdb
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\API_Peliculas.genruntimeconfig.cache
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\ref\API_Peliculas.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Microsoft.Practices.ServiceLocation.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\XAct.Core.PCL.dll
