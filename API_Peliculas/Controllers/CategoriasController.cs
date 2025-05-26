@@ -3,6 +3,7 @@ using API_Peliculas.Modelos.Dtos;
 using API_Peliculas.Repositorio.IRepositorio;
 using AutoMapper;
 using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace API_Peliculas.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")] // Define la ruta base para este controlador.
     [ApiController] // Este atributo activa características específicas para APIs web,
                     // como validación automática del modelo, inferencia de fuentes de parámetros, etc.
