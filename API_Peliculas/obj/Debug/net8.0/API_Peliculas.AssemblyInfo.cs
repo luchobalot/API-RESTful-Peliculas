@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_Peliculas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6106d4322a89f7a4ebfb22d33827927c48f34547")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8eab3c595c2029768bdaa29c15cf0830ae63d2fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_Peliculas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_Peliculas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
