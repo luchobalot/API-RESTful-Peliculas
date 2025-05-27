@@ -2,6 +2,7 @@
 using API_Peliculas.Modelos.Dtos;
 using API_Peliculas.Repositorio.IRepositorio;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,7 @@ namespace API_Peliculas.Controllers
         // |        VER TODAS LAS PELICULAS         |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -45,6 +47,7 @@ namespace API_Peliculas.Controllers
         // |           VER PELICULA POR ID          |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet("{peliculaId:int}", Name = "GetPelicula")]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -68,6 +71,7 @@ namespace API_Peliculas.Controllers
         // |          CREAR NUEVA PELICULA          |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(PeliculaDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -108,6 +112,7 @@ namespace API_Peliculas.Controllers
         // |      ACTUALIZAR CATEGORIA - PATCH      |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpPatch("{peliculaId:int}", Name = "ActualizarPatchPelicula")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -142,6 +147,7 @@ namespace API_Peliculas.Controllers
         // |          BORRAR UNA PELICULA           |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpDelete("{peliculaId:int}", Name = "BorrarPelicula")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -170,6 +176,7 @@ namespace API_Peliculas.Controllers
         // |         PELICULAS EN CATEGORIA         |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet("GetPeliculasEnCategoria/{categoriaId:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -198,6 +205,7 @@ namespace API_Peliculas.Controllers
         // |         PELICULAS EN CATEGORIA         |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet("Buscar")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
