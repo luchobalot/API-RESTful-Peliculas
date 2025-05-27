@@ -13,7 +13,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace API_Peliculas.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")] // Define la ruta base para este controlador.
     [ApiController] // Este atributo activa características específicas para APIs web,
                     // como validación automática del modelo, inferencia de fuentes de parámetros, etc.
@@ -37,6 +37,7 @@ namespace API_Peliculas.Controllers
         // |         VER TODAS LAS CATEOGRIAS       |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status403Forbidden)] // 403: Prohibido (el usuario no tiene permiso)
         [ProducesResponseType(StatusCodes.Status200OK)] // 200: OK (todo salió bien)
@@ -61,6 +62,7 @@ namespace API_Peliculas.Controllers
         // |           VER CATEGORIA POR ID         |
         // ==========================================
 
+        [AllowAnonymous]
         [HttpGet("{categoriaId:int}", Name = "GetCategoria")]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -84,6 +86,7 @@ namespace API_Peliculas.Controllers
         // |          CREAR NUEVA CATEGORIA         |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)] // 201: Creado (éxito al crear un recurso)
         [ProducesResponseType(StatusCodes.Status500InternalServerError)] // 500: Error interno del servidor
@@ -130,6 +133,7 @@ namespace API_Peliculas.Controllers
         // |      ACTUALIZAR CATEGORIA - PUTT       |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpPut("{categoriaId:int}", Name = "ActualizarCategoria")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -170,6 +174,7 @@ namespace API_Peliculas.Controllers
         // |          BORRAR UNA CATEGORIA          |
         // ==========================================
 
+        [Authorize(Roles = "admin")]
         [HttpDelete("{categoriaId:int}", Name = "BorrarCategoria")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

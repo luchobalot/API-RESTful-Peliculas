@@ -43,7 +43,7 @@ builder.Services.AddAutoMapper(typeof(PeliculasMapper));
 
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secreta");
 
-// Configuracion de la Autenticacion
+// AUTENTICACION y AUTORIZACION
 builder.Services.AddAuthentication(
     x => {
 
@@ -62,9 +62,6 @@ builder.Services.AddAuthentication(
             ValidateIssuer = false,
         };
     });
-
-
-
 
 var app = builder.Build();
 
