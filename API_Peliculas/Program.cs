@@ -9,7 +9,11 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// ----------------------------
+// Configuración de servicios
+// ----------------------------
+
+// Conexión a la base de datos
 builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
     opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSQL")));
 
@@ -26,13 +30,14 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Agrega controladores
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-// Repositorios:
+// Repositorios
 builder.Services.AddScoped<IPeliculaRepositorio, PeliculaRepositorio>();
 builder.Services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
@@ -40,32 +45,33 @@ builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 // Mapper
 builder.Services.AddAutoMapper(typeof(PeliculasMapper));
 
-
+// Configuración de autenticación y JWT
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secreta");
 
-// AUTENTICACION y AUTORIZACION
-builder.Services.AddAuthentication(
-    x => {
-
-        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; // Usa JWT Bearer para verificar quién es el usuario
-        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme; // Usa JWT Bearer para manejar usuarios no autenticados
-    }
-
-    ).AddJwtBearer( x =>
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
     {
-        x.RequireHttpsMetadata = false;
-        x.SaveToken = true;
-        x.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
-            ValidateIssuer = false,
-        };
-    });
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
 
+// ----------------------------
+// Configuración del pipeline
+// ----------------------------
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Swagger solo en desarrollo
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -74,13 +80,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication(); // Soporte de autenticaciòn
-
-// Habilitar CORS
+// Habilita CORS
 app.UseCors("AllowReactApp");
 
+// Middleware de autenticación y autorización
+app.UseAuthentication();
 app.UseAuthorization();
 
+// Mapea los controladores
 app.MapControllers();
 
+// Corre la aplicación
 app.Run();
