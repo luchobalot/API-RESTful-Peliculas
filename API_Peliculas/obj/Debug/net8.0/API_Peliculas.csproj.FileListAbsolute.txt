@@ -263,3 +263,7 @@ C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\obj\Debug\net8.0\ref\API_P
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Microsoft.Practices.ServiceLocation.dll
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\XAct.Core.PCL.dll
 C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Users\SIAG28\Desktop\Curso_API_Udemy\API_Peliculas\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll

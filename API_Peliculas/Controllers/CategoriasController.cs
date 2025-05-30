@@ -17,6 +17,7 @@ namespace API_Peliculas.Controllers
     [Route("api/[controller]")] // Define la ruta base para este controlador.
     [ApiController] // Este atributo activa características específicas para APIs web,
                     // como validación automática del modelo, inferencia de fuentes de parámetros, etc.
+    [ResponseCache(Duration = 20)]
     public class CategoriasController : ControllerBase // Define la clase del controlador que hereda de ControllerBase
     {
         // Declaración de dependencias: necesitas un repositorio para acceder a los datos de

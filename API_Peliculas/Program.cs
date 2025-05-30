@@ -2,6 +2,7 @@ using API_Peliculas.Data;
 using API_Peliculas.PeliculasMapper;
 using API_Peliculas.Repositorio;
 using API_Peliculas.Repositorio.IRepositorio;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -64,6 +65,29 @@ builder.Services.AddSwaggerGen(options =>
             }
         });
     });
+
+// Soporte Cache
+
+
+
+// Soporte para el versionamiento
+var apiVersioningBuilder = builder.Services.AddApiVersioning(opcion =>
+    {
+    opcion.AssumeDefaultVersionWhenUnspecified = true;
+    opcion.DefaultApiVersion = new ApiVersion(1, 0);
+    opcion.ReportApiVersions = true;
+        opcion.ApiVersionReader = ApiVersionReader.Combine(
+            new QueryStringApiVersionReader("api-version")
+        );
+});
+
+apiVersioningBuilder.AddApiExplorer(
+    opciones =>
+    {
+        opciones.GroupNameFormat = "'v'VVV";
+    }
+
+    );
 
 // Repositorios
 builder.Services.AddScoped<IPeliculaRepositorio, PeliculaRepositorio>();
