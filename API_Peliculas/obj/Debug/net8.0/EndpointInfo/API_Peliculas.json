@@ -914,8 +914,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "integer"
             }
           },
           {
@@ -993,7 +992,7 @@
         }
       }
     },
-    "/api/usuarios/registro": {
+    "/api/usuarios/Registro": {
       "post": {
         "tags": [
           "Usuarios"

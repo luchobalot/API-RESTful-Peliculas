@@ -2,43 +2,50 @@
 using API_Peliculas.Modelos;
 using API_Peliculas.Modelos.Dtos;
 using API_Peliculas.Repositorio.IRepositorio;
+using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using XSystem.Security.Cryptography;
 
 namespace API_Peliculas.Repositorio
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly ApplicationDbContext _bd;
-        // Obtiene la clave secreta desde la configuración (appsettings.json
+        // Obtiene la clave secreta desde la configuración appsettings.json
         private string claveSecreta;
+        private readonly UserManager<AppUsuario> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IMapper _mapper;
 
-        public UsuarioRepositorio(ApplicationDbContext bd, IConfiguration config)
+        public UsuarioRepositorio(ApplicationDbContext bd, IConfiguration config, UserManager<AppUsuario> userManager,
+            RoleManager<IdentityRole> roleManager, IMapper mapper)
         {
             _bd = bd;
             claveSecreta = config.GetValue<string>("ApiSettings:Secreta");
+            _userManager = userManager;
+            _roleManager = roleManager;
+            _mapper = mapper;
         }
 
         // Busca un usuario especifico por su ID, retorna NULL si no lo encuentra
-        public Usuario GetUsuario(int usarioId)
-  
+        public AppUsuario GetUsuario(string usuarioId) 
         {
-            return _bd.Usuario.FirstOrDefault(c => c.Id == usarioId);
+            return _bd.AppUsuario.FirstOrDefault(c => c.Id == usuarioId);
         }
 
         // Obtiene todos los usuarios ordenados alfabéticamente por nombre de usuario
-        public ICollection<Usuario> GetUsuarios()
+        public ICollection<AppUsuario> GetUsuarios()
         {
-            return _bd.Usuario.OrderBy(c => c.NombreUsuario).ToList();
+            return _bd.AppUsuario.OrderBy(c => c.UserName).ToList();
         }
 
         // Verificar si un nombre de usuario ya está en uso antes de registrar uno nuevo.
         public bool IsUniqueUser(string usuario)
         {
-            var usuarioBd = _bd.Usuario.FirstOrDefault(u => u.NombreUsuario == usuario);
+            var usuarioBd = _bd.AppUsuario.FirstOrDefault(u => u.UserName == usuario);
 
             if (usuarioBd == null)
             {
@@ -49,15 +56,13 @@ namespace API_Peliculas.Repositorio
 
         public async Task<UsuarioLoginRespuestaDto> Login(UsuarioLoginDto usuarioLoginDto)
         {
-            // Se encripta la contraseña ingresada con MD5
-            var passwordEncriptado = obtenermd5(usuarioLoginDto.Password);
-            var usuario = _bd.Usuario.FirstOrDefault(
-                u => u.NombreUsuario.ToLower() == usuarioLoginDto.NombreUsuario.ToLower()
-                && u.Password == passwordEncriptado
-                );
+            var usuario = _bd.AppUsuario.FirstOrDefault(
+                u => u.UserName.ToLower() == usuarioLoginDto.NombreUsuario.ToLower());
+
+            bool isValid = await _userManager.CheckPasswordAsync(usuario, usuarioLoginDto.Password);
 
             // Validación si el usuario no existe
-            if (usuario == null)
+            if (usuario == null || isValid == false)
             {
                 return new UsuarioLoginRespuestaDto()
                 {
@@ -67,6 +72,7 @@ namespace API_Peliculas.Repositorio
             }
 
             // Si existe el usuario, entonces se ejecuta esta parte del codigo:
+            var roles = await _userManager.GetRolesAsync(usuario);
             var manejandoToken = new JwtSecurityTokenHandler(); // proporciona métodos para crear, escribir y validar tokens JWT
 
             // Convierte una cadena (claveSecreta, que es la clave secreta para firmar el token) en un arreglo de bytes usando codificación ASCII.
@@ -78,9 +84,9 @@ namespace API_Peliculas.Repositorio
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     // Un claim que almacena el nombre del usuario (por ejemplo, "JuanPerez").
-                    new Claim(ClaimTypes.Name, usuario.NombreUsuario.ToString()),
+                    new Claim(ClaimTypes.Name, usuario.UserName.ToString()),
                     // Un claim que almacena el rol del usuario (por ejemplo, "Admin" o "Usuario").
-                    new Claim(ClaimTypes.Role, usuario.Rol)
+                    new Claim(ClaimTypes.Role, roles.FirstOrDefault())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7), // Establece la fecha y hora de expiración del token.
                 SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature) // Configura las credenciales de firma del token, especificando la clave y el algoritmo de firma
@@ -95,41 +101,42 @@ namespace API_Peliculas.Repositorio
                 // Llama al método WriteToken del objeto JwtSecurityTokenHandler para convertir el objeto JwtSecurityToken
                 Token = manejandoToken.WriteToken(token),
                 // Asigna al objeto usuario a la propieda Usuario del DTO
-                Usuario = usuario
+                Usuario = _mapper.Map<UsuarioDatosDto>(usuario)
             };
 
             return usuarioLoginRespuestaDto;
         }
 
-        public async Task<Usuario> Registro(UsuarioRegistroDto usuarioRegistroDto)
+        public async Task<UsuarioDatosDto> Registro(UsuarioRegistroDto usuarioRegistroDto) // Cambiar retorno a UsuarioDatosDto
         {
-            var passwordEncriptado = obtenermd5(usuarioRegistroDto.Password);
-
-            Usuario usuario = new Usuario()
+            AppUsuario usuario = new AppUsuario()
             {
-                NombreUsuario = usuarioRegistroDto.NombreUsuario,
-                Password = passwordEncriptado,
-                Nombre = usuarioRegistroDto.Nombre,
-                Rol = usuarioRegistroDto.Rol
+                UserName = usuarioRegistroDto.NombreUsuario,
+                Email = usuarioRegistroDto.NombreUsuario,
+                NormalizedEmail = usuarioRegistroDto.NombreUsuario.ToUpper(),
+                Nombre = usuarioRegistroDto.Nombre
             };
-            
-            _bd.Usuario.Add(usuario);
-            await _bd.SaveChangesAsync();
-            usuario.Password = passwordEncriptado;
 
-            return usuario;
-        }
 
-        // Metodo de encriptación de contraseña con MD5 (Se usa tanto en el acceso como registro)
-        public static string obtenermd5(string valor)
-        {
-            MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();
-            byte[] data = System.Text.Encoding.UTF8.GetBytes(valor);
-            data = x.ComputeHash(data);
-            string resp = "";
-            for (int i = 0; i < data.Length; i++)
-                resp += data[i].ToString("x2").ToLower();
-            return resp;
+            var result = await _userManager.CreateAsync(usuario, usuarioRegistroDto.Password);
+
+            if (result.Succeeded)
+            {
+                if (!_roleManager.RoleExistsAsync("Admin").GetAwaiter().GetResult()) // "Admin" con mayúscula
+                {
+                    await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                    await _roleManager.CreateAsync(new IdentityRole("Registrado"));
+                }
+
+                await _userManager.AddToRoleAsync(usuario, "Admin"); // "Admin" con mayúscula
+
+                var usuarioReturn = _bd.AppUsuario.FirstOrDefault(
+                    u => u.UserName == usuarioRegistroDto.NombreUsuario);
+
+                return _mapper.Map<UsuarioDatosDto>(usuarioReturn);
+            }
+
+            return new UsuarioDatosDto(); // Constructor correcto
         }
     }
 }

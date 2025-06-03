@@ -1,9 +1,11 @@
 using API_Peliculas.Data;
+using API_Peliculas.Modelos;
 using API_Peliculas.PeliculasMapper;
 using API_Peliculas.Repositorio;
 using API_Peliculas.Repositorio.IRepositorio;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -66,7 +68,8 @@ builder.Services.AddSwaggerGen(options =>
         });
     });
 
-// Soporte Cache
+// Soporte para Autenticación .NET Identity
+builder.Services.AddIdentity<AppUsuario, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
 
 

@@ -608,7 +608,7 @@
     "Parameters": [
       {
         "Name": "usuarioId",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
@@ -697,7 +697,7 @@
   {
     "ContainingType": "API_Peliculas.Controllers.UsuariosController",
     "Method": "Registro",
-    "RelativePath": "api/usuarios/registro",
+    "RelativePath": "api/usuarios/Registro",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
