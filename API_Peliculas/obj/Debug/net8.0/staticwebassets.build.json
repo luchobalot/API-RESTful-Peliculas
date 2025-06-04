@@ -1,12 +1,228 @@
 {
   "Version": 1,
-  "Hash": "Wya+dQYxxOQZBfT2X3NeX4G7XNsxdPir27vZ2afj0fs=",
+  "Hash": "svbAf1ADBm9mU4sADavKAhLD6R5AxlWbFcVxkYNszTc=",
   "Source": "API_Peliculas",
   "BasePath": "_content/API_Peliculas",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "API_Peliculas\\wwwroot",
+      "Source": "API_Peliculas",
+      "ContentRoot": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\",
+      "BasePath": "_content/API_Peliculas",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg",
+      "SourceId": "API_Peliculas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\",
+      "BasePath": "_content/API_Peliculas",
+      "RelativePath": "ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sg935h6qvd",
+      "Integrity": "VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
+      "SourceId": "API_Peliculas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\",
+      "BasePath": "_content/API_Peliculas",
+      "RelativePath": "ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rixfb9yffa",
+      "Integrity": "jRn+lg0AQDKQlrCWtx+tGz9FVzbjJM8ediho2+HrbaA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.jpg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "626587"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 12:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc="
+        }
+      ]
+    },
+    {
+      "Route": "ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.sg935h6qvd.jpg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "626587"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 12:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sg935h6qvd"
+        },
+        {
+          "Name": "label",
+          "Value": "ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc="
+        }
+      ]
+    },
+    {
+      "Route": "ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "415541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jRn+lg0AQDKQlrCWtx+tGz9FVzbjJM8ediho2+HrbaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:34:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jRn+lg0AQDKQlrCWtx+tGz9FVzbjJM8ediho2+HrbaA="
+        }
+      ]
+    },
+    {
+      "Route": "ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.rixfb9yffa.jpeg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "415541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jRn+lg0AQDKQlrCWtx+tGz9FVzbjJM8ediho2+HrbaA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:34:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rixfb9yffa"
+        },
+        {
+          "Name": "label",
+          "Value": "ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jRn+lg0AQDKQlrCWtx+tGz9FVzbjJM8ediho2+HrbaA="
+        }
+      ]
+    }
+  ]
 }

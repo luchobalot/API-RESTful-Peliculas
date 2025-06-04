@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/API_Peliculas/ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ImagenesPeliculas\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VMRIUnIE3rDrXrZ7K\u002BKB0A\u002BS7t2a\u002BApPjFcRAMh5pEc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"626587"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VMRIUnIE3rDrXrZ7K\u002BKB0A\u002BS7t2a\u002BApPjFcRAMh5pEc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Jun 2025 12:55:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API_Peliculas/ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.sg935h6qvd.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ImagenesPeliculas\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sg935h6qvd"},{"Name":"integrity","Value":"sha256-VMRIUnIE3rDrXrZ7K\u002BKB0A\u002BS7t2a\u002BApPjFcRAMh5pEc="},{"Name":"label","Value":"_content/API_Peliculas/ImagenesPeliculas/0888335d2-40ab-4026-9cb9-b11d9772165c.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"626587"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VMRIUnIE3rDrXrZ7K\u002BKB0A\u002BS7t2a\u002BApPjFcRAMh5pEc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Jun 2025 12:55:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API_Peliculas/ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ImagenesPeliculas\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jRn\u002Blg0AQDKQlrCWtx\u002BtGz9FVzbjJM8ediho2\u002BHrbaA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"415541"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jRn\u002Blg0AQDKQlrCWtx\u002BtGz9FVzbjJM8ediho2\u002BHrbaA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Jun 2025 13:34:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API_Peliculas/ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.rixfb9yffa.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ImagenesPeliculas\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rixfb9yffa"},{"Name":"integrity","Value":"sha256-jRn\u002Blg0AQDKQlrCWtx\u002BtGz9FVzbjJM8ediho2\u002BHrbaA="},{"Name":"label","Value":"_content/API_Peliculas/ImagenesPeliculas/12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"415541"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jRn\u002Blg0AQDKQlrCWtx\u002BtGz9FVzbjJM8ediho2\u002BHrbaA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Jun 2025 13:34:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

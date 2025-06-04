@@ -1,4 +1,6 @@
-﻿namespace API_Peliculas.Modelos.Dtos
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace API_Peliculas.Modelos.Dtos
 {
     public class CrearPeliculaDto
     {
@@ -8,7 +10,9 @@
 
         public int Duracion { get; set; }
 
-        public string RutaImagen { get; set; }
+        public string? RutaImagen { get; set; }
+
+        public IFormFile Imagen { get; set; }
 
         public enum CrearTipoClasificacion { Siete, Trece, Diesciseis, Dieciocho }
 

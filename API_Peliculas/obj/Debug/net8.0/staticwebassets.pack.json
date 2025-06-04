@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg",
+      "PackagePath": "staticwebassets\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
+      "PackagePath": "staticwebassets\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API_Peliculas.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API_Peliculas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.API_Peliculas.props",
+      "PackagePath": "build\\API_Peliculas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API_Peliculas.props",
+      "PackagePath": "buildMultiTargeting\\API_Peliculas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.API_Peliculas.props",
+      "PackagePath": "buildTransitive\\API_Peliculas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

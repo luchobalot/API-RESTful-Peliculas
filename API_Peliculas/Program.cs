@@ -133,6 +133,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Soporte para archivos estáticos como imágenes
+app.UseStaticFiles();
+
+
 app.UseHttpsRedirection();
 
 // Habilita CORS
