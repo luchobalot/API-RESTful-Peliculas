@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "svbAf1ADBm9mU4sADavKAhLD6R5AxlWbFcVxkYNszTc=",
+  "Hash": "5ZpDl4su/RBS8pXZVcSKCvW5nkx62e4RKdAihRbMPjs=",
   "Source": "API_Peliculas",
   "BasePath": "_content/API_Peliculas",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ImagenesPeliculas\\0888335d2-40ab-4026-9cb9-b11d9772165c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\104ea5812a-d881-4792-937a-1bf8b6348635.jpg",
+      "SourceId": "API_Peliculas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\",
+      "BasePath": "_content/API_Peliculas",
+      "RelativePath": "ImagenesPeliculas/104ea5812a-d881-4792-937a-1bf8b6348635#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bacwby59io",
+      "Integrity": "M0l4smlrsqQZF5+yZU+2NArhOnPpY4nc5v+ECgiENUc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImagenesPeliculas\\104ea5812a-d881-4792-937a-1bf8b6348635.jpg"
     },
     {
       "Identity": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\12a7406372-e4fb-4ae9-9d34-b1e775ff083f.jpeg",
@@ -139,6 +160,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-VMRIUnIE3rDrXrZ7K+KB0A+S7t2a+ApPjFcRAMh5pEc="
+        }
+      ]
+    },
+    {
+      "Route": "ImagenesPeliculas/104ea5812a-d881-4792-937a-1bf8b6348635.bacwby59io.jpg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\104ea5812a-d881-4792-937a-1bf8b6348635.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1748425"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M0l4smlrsqQZF5+yZU+2NArhOnPpY4nc5v+ECgiENUc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bacwby59io"
+        },
+        {
+          "Name": "label",
+          "Value": "ImagenesPeliculas/104ea5812a-d881-4792-937a-1bf8b6348635.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M0l4smlrsqQZF5+yZU+2NArhOnPpY4nc5v+ECgiENUc="
+        }
+      ]
+    },
+    {
+      "Route": "ImagenesPeliculas/104ea5812a-d881-4792-937a-1bf8b6348635.jpg",
+      "AssetFile": "C:\\Users\\SIAG28\\Desktop\\Curso_API_Udemy\\API_Peliculas\\wwwroot\\ImagenesPeliculas\\104ea5812a-d881-4792-937a-1bf8b6348635.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1748425"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M0l4smlrsqQZF5+yZU+2NArhOnPpY4nc5v+ECgiENUc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M0l4smlrsqQZF5+yZU+2NArhOnPpY4nc5v+ECgiENUc="
         }
       ]
     },

@@ -247,21 +247,32 @@ namespace API_Peliculas.Controllers
 
         public IActionResult GetPeliculasEnCategoria(int categoriaId)
         {
-            var listaPeliculas = _pelRepo.GetPeliculasEnCategoria(categoriaId);
 
-            if (listaPeliculas == null)
+            try
             {
-                return NotFound();
+                var listaPeliculas = _pelRepo.GetPeliculasEnCategoria(categoriaId);
+
+                if (listaPeliculas == null || !listaPeliculas.Any())
+                {
+                    return NotFound($"No se ha encontrado ninguna pelicula!");
+                }
+
+                var itemPelicula = listaPeliculas.Select(pelicula => _mapper.Map<PeliculaDto>(pelicula)).ToList();
+
+                //foreach (var pelicula in listaPeliculas)
+                //{
+                //    itemPelicula.Add(_mapper.Map<PeliculaDto>(pelicula));
+                //}
+
+                return Ok(itemPelicula);
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error recuperando datos de la aplicación!");
             }
 
-            var itemPelicula = new List<PeliculaDto>();
 
-            foreach (var pelicula in listaPeliculas)
-            {
-                itemPelicula.Add(_mapper.Map<PeliculaDto>(pelicula));
-            }
-
-            return Ok(itemPelicula);
         }
 
         // ==========================================
@@ -278,14 +289,15 @@ namespace API_Peliculas.Controllers
         {
             try
             {
-                var resultado = _pelRepo.BuscarPelicula(nombre);
+                var peliculas = _pelRepo.BuscarPelicula(nombre);
 
-                if (resultado.Any())
+                if (!peliculas.Any())
                 {
-                    return Ok(resultado);
+                    return NotFound($"No se ha encontrado ninguna pelicula!");
                 }
 
-                return NotFound();
+                var peliculasDto = _mapper.Map<IEnumerable<PeliculaDto>>(peliculas);
+                return Ok(peliculasDto);
 
             }
             catch(Exception)

@@ -21,7 +21,7 @@
 
         public int AnioEstreno { get; set; }
 
-        public DateTime FechaCreacion { get; set; }
+        public DateTime? FechaCreacion { get; set; }
 
         public int categoriaId { get; set; }
 
